@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   color: green;
   text-decoration: underline;
@@ -13,6 +17,9 @@ body {
   margin-right: auto;
   margin-left: auto;
   width: 50%;
+}
+.routes {
+  width: 40%;
 }
 .nav {
   display: flex;
@@ -67,6 +74,8 @@ form {
   font-size: 18px;
   color: #4b0082;
   gap: 8px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 button {
   color: #4b0082;
