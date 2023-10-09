@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <style>
+    .list-characters {
+      padding: 3rem;
+      box-sizing: border-box;
+      gap: 1rem;
+      display: flex;
+      justify-items: center;
+      align-items: stretch;
+      width: calc(100% - 5rem);
+      list-style-type: none; /* Remove bullets */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margins */
+    }
+    .list-characters__item {
+      flex-basis: calc(100% / 3);
+      flex-shrink: 0;
+      border: 1px solid;
+
+      /* center the image */
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+    }
+    .character-image {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  <body>
+    <main>
+      <h1>Welcome to Buttons & Dragons</h1>
+      <ul class="list-characters">
+        <li class="list-characters__item" style="border-color: green">
+          <h2>Dragon</h2>
+          <img
+            class="character-image"
+            src="../ejercicio-2-rodolfo/dragon.jpg"
+          />
+        </li>
+        <li class="list-characters__item" style="border-color: red">
+          <h2>Rodolfo</h2>
+          <img
+            class="character-image"
+            src="../ejercicio-1-rodolfo/rodolfo.jpg"
+          />
+        </li>
+        <li class="list-characters__item" style="border-color: purple">
+          <h2>Mago</h2>
+          <img class="character-image" src="../ejercicio-2-rodolfo/mago.jpg" />
+        </li>
+      </ul>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
