@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import PetCard from "./components/PetCard";
+
+const data = [
+  {
+    nombre: "Abyssinian",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gustav_chocolate.jpg/800px-Gustav_chocolate.jpg",
+    origen: "Egipto",
+    id: 1,
+  },
+  {
+    nombre: "Spangle",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Spangled_Cat.jpg",
+    origen: "US",
+    id: 2,
+  },
+  {
+    nombre: "Cyprus cat",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/b/b9/CyprusShorthair.jpg",
+    origen: "Cyprius",
+    id: 3,
+  },
+  {
+    nombre: "Savannah",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c4/Savannah_Cat_portrait.jpg",
+    origen: "United States",
+    id: 4,
+  },
+  {
+    nombre: "Burmese",
+    imagen:
+      "https://upload.wikimedia.org/wikipedia/commons/5/5c/British_burmese_-_Andel_Alois_at_Cat_show.JPG",
+    origen: "Burma",
+    id: 5,
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="main-container">
+      {data.map((cat) => {
+        return (
+          <PetCard
+            key={cat.id}
+            nombre={cat.nombre}
+            imagen={cat.imagen}
+          ></PetCard>
+        );
+      })}
+    </div>
+  );
 }
 
-export default App
+export default App;
