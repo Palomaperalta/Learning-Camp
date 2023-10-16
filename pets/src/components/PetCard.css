@@ -30,6 +30,10 @@ p {
   line-height: 40px;
   letter-spacing: 2px;
 }
+.origen {
+  font-size: 14px;
+  color: #696969;
+}
 button {
   padding: 12px 24px;
   background-color: #20b2aa;

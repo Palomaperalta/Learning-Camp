@@ -13,7 +13,7 @@ const data = [
     nombre: "Spangle",
     imagen:
       "https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Spangled_Cat.jpg",
-    origen: "US",
+    origen: "United States",
     id: 2,
   },
   {
@@ -48,6 +48,7 @@ function App() {
             key={cat.id}
             nombre={cat.nombre}
             imagen={cat.imagen}
+            origen={cat.origen}
           ></PetCard>
         );
       })}

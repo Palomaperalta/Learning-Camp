@@ -1,7 +1,7 @@
 import "./PetCard.css";
 import { useState } from "react";
 
-function PetCard({ imagen, nombre }) {
+function PetCard({ imagen, nombre, origen }) {
   const [meGusta, setMeGusta] = useState(false);
   return (
     <div className="pet-card">
@@ -9,6 +9,7 @@ function PetCard({ imagen, nombre }) {
         <img className="img-pet" src={imagen} alt="" />
       </div>
       <p>{nombre}</p>
+      <p className="origen">{origen}</p>
       {meGusta ? (
         <button onClick={() => setMeGusta(false)}>Ya no me gusta</button>
       ) : (
