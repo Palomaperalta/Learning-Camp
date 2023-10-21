@@ -1,4 +1,3 @@
-import "./App.css";
 import PetCard from "./components/PetCard";
 
 const data = [
@@ -41,7 +40,7 @@ const data = [
 
 function App() {
   return (
-    <div className="main-container">
+    <div className="flex gap-4 items-center justify-center p-4 flex-wrap">
       {data.map((cat) => {
         return (
           <PetCard
