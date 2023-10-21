@@ -3,10 +3,10 @@ import { useState } from "react";
 function PetCard({ imagen, nombre, origen }) {
   const [meGusta, setMeGusta] = useState(false);
   return (
-    <div className="flex flex-col bg-emerald-400 justify-center items-center gap-8 min-w-[400px] max-w-fit p-24 rounded">
+    <div className="flex flex-col bg-emerald-400 justify-center items-center gap-8 min-w-[400px] max-w-fit p-6 rounded">
       <div className="flex justify-center">
         <img
-          className="w-full h-[35vh] rounded block object-fill hover:bg-emerald-700"
+          className="w-full h-[35vh] rounded block object-fill hover:shadow hover:shadow-emerald-700"
           src={imagen}
           alt=""
         />
