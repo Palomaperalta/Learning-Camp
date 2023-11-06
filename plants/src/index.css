@@ -23,7 +23,8 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 /*
   5. Improve media defaults
