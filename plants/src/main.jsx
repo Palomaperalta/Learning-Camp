@@ -5,6 +5,8 @@ import "./index.css";
 import { ApiProvider } from "./context/ApiContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root.jsx";
+import ContactUs from "./routes/ContactUs.jsx";
+import AboutUs from "./routes/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +23,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <div>About us</div>,
+        element: <AboutUs></AboutUs>,
       },
       {
         path: "/contact",
-        element: <div>Contact</div>,
+        element: <ContactUs></ContactUs>,
       },
     ],
   },

@@ -1,15 +1,22 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import PlantsCard from "../components/PlantsCard";
+import { ArrowUpCircle } from "lucide-react";
 
 import { ApiContext } from "../context/ApiContext";
 import FilterPlants from "../components/FilterPlants";
 
 function App() {
   const [plants, , loading] = useContext(ApiContext);
-
+  const arrowElement = useRef(null);
+  const focusArrow = () => {
+    arrowElement.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <div className="bg-green-200 flex justify-center items-center h-52 gap-4">
+      <div
+        ref={arrowElement}
+        className="bg-green-200 flex justify-center items-center h-52 gap-4"
+      >
         <h1 className="text-3xl font-semibold tracking-wider">
           BOTANICAL DATA FOR PLANTS
         </h1>
@@ -33,6 +40,9 @@ function App() {
             );
           })
         )}
+        <button className="fixed right-6 bottom-8" onClick={focusArrow}>
+          <ArrowUpCircle size={48} color="#4ADE80" />
+        </button>
       </div>
     </>
   );

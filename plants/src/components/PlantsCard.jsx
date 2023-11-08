@@ -8,7 +8,7 @@ function PlantsCard({
   sunlight,
 }) {
   return (
-    <div className="flex flex-col bg-green-300 justify-center items-center gap-3 min-w-[400px] max-w-fit p-6 rounded font-sans">
+    <div className="flex flex-col bg-green-300 justify-center items-center gap-3 min-w-[400px] max-w-fit p-6 rounded font-sans hover:shadow hover:shadow-emerald-700">
       <div>
         {imgSrc ? <img src={imgSrc} alt="img" /> : <span>No Image</span>}
       </div>
